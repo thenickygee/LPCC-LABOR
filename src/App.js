@@ -1,56 +1,50 @@
-import { useEffect } from 'react';
 import letterImage from './letter.png';
 import lpccVideo from './lpcc.mp4';
 import './App.css';
 
-function loadScript() {
-  const script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src = 'https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js';
-  script.setAttribute('data-name', 'bmc-button');
-  script.setAttribute('data-slug', 'ScammerBuster');
-  script.setAttribute('data-color', '#FFDD00');
-  script.setAttribute('data-emoji', '');
-  script.setAttribute('data-font', 'Cookie');
-  script.setAttribute('data-text', 'Buy me a coffee');
-  script.setAttribute('data-outline-color', '#000000');
-  script.setAttribute('data-font-color', '#000000');
-  script.setAttribute('data-coffee-color', '#ffffff');
-  document.body.appendChild(script);
-}
-
 function App() {
-  useEffect(() => {
-    loadScript();
-  }, []);
   return (
-    <div className='App'>
+    <div className='App pt-5'>
       <header className='App-header'>
-        <h1>⚠️😢🛑✋</h1>
-        <h1>WARNING!</h1>
-        <h2>LPCC is a scam.</h2>
-        <p>Do not pay for free labor posters</p>
-        <video width='320' height='240' controls>
+        <div className='border-2 w-[90%] max-w-6xl rounded-md shadow-lg bg-neutral-700 p-5 mb-5'>
+          <h1 className='font-bold text-red-500 text-6xl'>✋ WARNING!</h1>
+          <h2 className='font-bold text-6xl'>LPCC is a scam.</h2>
+          <h3>Are you being sold free Labor Law Posters?</h3>
+          <h4>Do not pay for free labor posters.</h4>
+        </div>
+        <video
+          className='rounded-md shadow-lg max-w-6xl'
+          width='90%'
+          height='240'
+          controls
+        >
           <source src={lpccVideo} type='video/mp4' id='video' />
         </video>
-        <img src={letterImage} alt='Letter' id='letter' />
-        <p>See these articles below:</p>
-        <a
-          className='App-link'
-          href='https://wpthemespeed.com/labor-poster-scam-alert-after-creating-new-corporations-or-llcs/'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Labor Poster Scam Alert after creating new corporations or LLCs
-        </a>
-        <a
-          className='App-link'
-          href='https://www.bbb.org/article/news-releases/26028-bbb-scam-alert-dont-pay-for-free-labor-law-posters'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          BBB Scam Alert: Don’t pay for free labor law posters
-        </a>
+        <img
+          src={letterImage}
+          alt='Letter'
+          id='letter'
+          className='letter-image min-w-[90%] pt-5 rounded-md overflow-hidden shadow-lg max-w-6xl'
+        />
+        <div className='max-w-6xl w-full border-2 bg-neutral-600 flex flex-col rounded-md mt-5 p-5'>
+          <p className='font-bold'>See these articles below:</p>
+          <a
+            className='underline cursor-pointer text-sm'
+            href='https://wpthemespeed.com/labor-poster-scam-alert-after-creating-new-corporations-or-llcs/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Labor Poster Scam Alert after creating new corporations or LLCs
+          </a>
+          <a
+            className='underline cursor-pointer text-sm'
+            href='https://www.bbb.org/article/news-releases/26028-bbb-scam-alert-dont-pay-for-free-labor-law-posters'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            BBB Scam Alert: Don’t pay for free labor law posters
+          </a>
+        </div>
       </header>
     </div>
   );
