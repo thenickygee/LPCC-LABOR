@@ -1,8 +1,28 @@
+import { useEffect } from 'react';
 import letterImage from './letter.png';
 import lpccVideo from './lpcc.mp4';
 import './App.css';
 
+function loadScript() {
+  const script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js';
+  script.setAttribute('data-name', 'bmc-button');
+  script.setAttribute('data-slug', 'ScammerBuster');
+  script.setAttribute('data-color', '#FFDD00');
+  script.setAttribute('data-emoji', '');
+  script.setAttribute('data-font', 'Cookie');
+  script.setAttribute('data-text', 'Buy me a coffee');
+  script.setAttribute('data-outline-color', '#000000');
+  script.setAttribute('data-font-color', '#000000');
+  script.setAttribute('data-coffee-color', '#ffffff');
+  document.body.appendChild(script);
+}
+
 function App() {
+  useEffect(() => {
+    loadScript();
+  }, []);
   return (
     <div className='App'>
       <header className='App-header'>
@@ -32,18 +52,6 @@ function App() {
           BBB Scam Alert: Don’t pay for free labor law posters
         </a>
       </header>
-      <script
-        data-name='BMC-Widget'
-        data-cfasync='false'
-        src='https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js'
-        data-id='ScammerBuster'
-        data-description='Support me on Buy me a coffee!'
-        data-message='I hope I saved you some money!'
-        data-color='#5F7FFF'
-        data-position='Right'
-        data-x_margin='18'
-        data-y_margin='18'
-      ></script>
     </div>
   );
 }
