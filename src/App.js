@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import letterImage from './letter.png';
 import './App.css';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
         <h1>WARNING!</h1>
         <h2>LPCC is a scam.</h2>
         <p>Do not pay for free labor posters</p>
-
+        <img src={letterImage} alt='Letter' id='letter' />
         <p>See these articles below:</p>
         <a
           className='App-link'
