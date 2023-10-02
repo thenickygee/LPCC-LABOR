@@ -35,15 +35,8 @@ h2 {
 }
 
 #letter {
-  max-width: 50vw;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 20px;
-}
-
-.letter-image {
-  max-width: 1440px;
+  width: 100%;
 }
 
 #video {

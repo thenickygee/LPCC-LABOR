@@ -1,4 +1,4 @@
-import letterImage from './letter.png';
+import letterImage from './letter-v2.png';
 import lpccVideo from './lpcc.mp4';
 import './App.css';
 
@@ -20,13 +20,8 @@ function App() {
         >
           <source src={lpccVideo} type='video/mp4' id='video' />
         </video>
-        <img
-          src={letterImage}
-          alt='Letter'
-          id='letter'
-          className='letter-image min-w-[90%] pt-5 rounded-md overflow-hidden shadow-lg max-w-6xl'
-        />
-        <div className='max-w-6xl w-full border-2 bg-neutral-600 flex flex-col rounded-md mt-5 p-5'>
+
+        <div className='max-w-6xl w-full border-2 bg-neutral-700 flex flex-col rounded-md mt-5 p-5'>
           <p className='font-bold'>See these articles below:</p>
           <a
             className='underline cursor-pointer text-sm'
@@ -45,6 +40,13 @@ function App() {
             BBB Scam Alert: Don’t pay for free labor law posters
           </a>
         </div>
+        <img
+          src={letterImage}
+          alt='Letter'
+          id='letter'
+          width='100%'
+          className='letter-image w-full x pt-5 rounded-md overflow-hidden shadow-lg max-w-6xl'
+        />
       </header>
     </div>
   );
